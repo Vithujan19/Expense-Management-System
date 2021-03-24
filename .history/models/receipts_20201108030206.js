@@ -1,0 +1,14 @@
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+const receiptSchema = new Schema({
+    uploadby: {type: String, required:true},
+    receiptno: {type: String, required: true},
+    article: {type: String, required: true},
+    receiptImage: {type: String, required: true},
+    postDate: { type: Date, required: true },
+})
+
+const Receipts = mongoose.model("Receipt", receiptSchema);
+
+module.exports = Receipts;
